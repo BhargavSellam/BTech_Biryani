@@ -3,7 +3,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { Phone, MapPin, Menu as MenuIcon, X, Instagram, Search, Navigation, UtensilsCrossed, ChevronLeft, ChevronRight, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import logo from "@/assets/logo.png.asset.json";
+const logo = "/assets/btech-biryani-logo.png";
 import hero from "@/assets/hero-biryani.jpg";
 import { SITE, MENU, MENU_IS_DEMO, GALLERY, priceLabel, type MenuItem } from "@/lib/site";
 
@@ -97,7 +97,7 @@ function Header() {
     <header className="sticky top-0 z-40 border-b bg-background/90 backdrop-blur">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4">
         <a href="#home" className="flex shrink-0 items-center gap-3" aria-label="B.TECH Biryani home">
-          <img src={logo.url} alt="B.TECH Biryani logo" width={56} height={56} className="h-14 w-14 rounded-full" />
+          <img src={logo} alt="B.TECH Biryani logo" width={56} height={56} className="h-14 w-14 rounded-full" />
         </a>
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Main">
           {NAV.map((n) => (
@@ -117,7 +117,7 @@ function Header() {
         <div className={`absolute inset-0 bg-charcoal/50 transition-opacity ${open ? "opacity-100" : "opacity-0"}`} onClick={() => setOpen(false)} />
         <div className={`absolute right-0 top-0 flex h-full w-[82%] max-w-sm flex-col bg-background p-6 shadow-soft transition-transform duration-300 ${open ? "translate-x-0" : "translate-x-full"}`}>
           <div className="mb-8 flex items-center justify-between">
-            <img src={logo.url} alt="" width={48} height={48} className="h-12 w-12 rounded-full" />
+            <img src={logo} alt="" width={48} height={48} className="h-12 w-12 rounded-full" />
             <button className="grid h-11 w-11 place-items-center rounded-full border" aria-label="Close menu" onClick={() => setOpen(false)}><X className="h-5 w-5" /></button>
           </div>
           <nav className="flex flex-col gap-1" aria-label="Mobile">
@@ -276,7 +276,7 @@ function About() {
   return (
     <section id="about" className="bg-charcoal py-20 text-charcoal-foreground">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 md:grid-cols-[auto_1fr]">
-        <img src={logo.url} alt="B.TECH Biryani logo" width={260} height={260} loading="lazy" className="reveal mx-auto h-56 w-56 rounded-full shadow-gold md:h-64 md:w-64" />
+        <img src={logo} alt="B.TECH Biryani logo" width={260} height={260} loading="lazy" className="reveal mx-auto h-56 w-56 rounded-full shadow-gold md:h-64 md:w-64" />
         <div className="reveal">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">About Us</p>
           <h2 className="mt-2 text-3xl font-bold text-charcoal-foreground sm:text-4xl">Welcome to B.TECH Biryani</h2>
@@ -450,7 +450,7 @@ function Footer() {
     <footer className="bg-charcoal text-charcoal-foreground">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:grid-cols-3">
         <div>
-          <img src={logo.url} alt="B.TECH Biryani logo" width={96} height={96} loading="lazy" className="h-24 w-24 rounded-full" />
+          <img src={logo} alt="B.TECH Biryani logo" width={96} height={96} loading="lazy" className="h-24 w-24 rounded-full" />
           <p className="mt-4 max-w-xs text-sm text-charcoal-foreground/75">Big flavour, every bite. Biryani in Ambajipeta, Andhra Pradesh.</p>
         </div>
         <nav aria-label="Footer">
